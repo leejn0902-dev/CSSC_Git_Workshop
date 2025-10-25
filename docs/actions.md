@@ -29,6 +29,10 @@ on:
   pull_request:
     branches: [ main ]
 
+# Restrict permissions for security
+permissions:
+  contents: read
+
 # Jobs to run
 jobs:
   build:
