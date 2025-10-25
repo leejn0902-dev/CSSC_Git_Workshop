@@ -38,7 +38,7 @@ jobs:
     # Steps to execute
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       
     - name: Run tests
       run: npm test
@@ -84,7 +84,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     
     - name: Set up Node.js
       uses: actions/setup-node@v3
@@ -116,7 +116,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     
     - name: Deploy to production
       run: ./deploy.sh
@@ -135,7 +135,7 @@ jobs:
   quality:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     
     - name: Run code formatter check
       run: npm run format:check
@@ -151,7 +151,7 @@ GitHub Marketplace offers thousands of pre-built actions:
 ```yaml
 steps:
   # Checkout code
-  - uses: actions/checkout@v3
+  - uses: actions/checkout@v4
   
   # Setup programming languages
   - uses: actions/setup-node@v3
@@ -203,7 +203,7 @@ jobs:
         node-version: [14, 16, 18]
     
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
@@ -253,14 +253,13 @@ jobs:
 - Check the Actions tab for workflow runs
 - Click on a workflow run to see job details
 - Click on a job to see step-by-step logs
-- Use `actions/checkout@v3` to access your code
 - Add debug steps with `run: echo "Debug: ${{ toJson(github) }}"`
 - Enable debug logging: Add secret `ACTIONS_STEP_DEBUG` = `true`
 
 ## Best Practices
 
 ✅ **Do:**
-- Use specific action versions (`actions/checkout@v3`, not `@main`)
+- Use specific action versions (`actions/checkout@v4`, not `@main`)
 - Cache dependencies to speed up workflows
 - Use matrix builds for cross-platform testing
 - Keep workflows focused and modular
