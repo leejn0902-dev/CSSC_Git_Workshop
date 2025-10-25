@@ -16,7 +16,7 @@ GitHub is a web-based platform built on top of Git that provides:
 
 ## Workshop Structure
 
-This workshop focuses on GitHub-specific features that make collaborative development easier:
+This part of the workshop focuses on GitHub-specific features that make collaborative development easier:
 
 1. **Issues** - Track bugs, features, and tasks
 2. **Pull Requests** - Propose and review code changes
